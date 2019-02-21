@@ -219,7 +219,7 @@ class TextPgmParam extends PgmParam
   @Override
   public Object toOutputValue(Object output)
   {
-    return ((String) output).trim();
+    return ((String) output).replaceAll("\\s+$", "");
   }
 
   @Override

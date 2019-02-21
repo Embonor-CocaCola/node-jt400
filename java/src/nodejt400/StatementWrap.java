@@ -86,7 +86,7 @@ public class StatementWrap {
 				ResultSetMetaData metaData = rs.getMetaData();
 				int columnCount = metaData.getColumnCount();
 				for (int i = 1; i <= columnCount; i++) {
-					json.add(JdbcJsonClient.trim(rs.getString(i)));
+					json.add(JdbcJsonClient.trimEnd(rs.getString(i)));
 				}
 				array.add(json);
 			}

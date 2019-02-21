@@ -45,7 +45,7 @@ public class JdbcJsonClient
 				int columnCount = metaData.getColumnCount();
 				for (int i = 1; i <= columnCount; i++)
 				{
-					json.put(metaData.getColumnLabel(i), trim(rs.getString(i)));
+					json.put(metaData.getColumnLabel(i), trimEnd(rs.getString(i)));
 				}
 				array.add(json);
 			}
@@ -175,9 +175,9 @@ public class JdbcJsonClient
 		}
 	}
 
-	public static final String trim(String value)
+	public static final String trimEnd(String value)
 	{
-		return value == null ? null : value.trim();
+		return value == null ? null : value.replaceAll("\\s+$", "");
 	}
 
 	public int update(String sql, String paramsJson)

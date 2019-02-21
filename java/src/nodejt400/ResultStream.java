@@ -55,7 +55,7 @@ public class ResultStream {
 				while (next && i < bufferSize) {
 					JSONArray row = new JSONArray();
 					for (int j = 1; j <= columnCount; j++) {
-						row.add(JdbcJsonClient.trim(rs.getString(j)));
+						row.add(JdbcJsonClient.trimEnd(rs.getString(j)));
 					}
 					sb.append(sep);
 					sep = ",";

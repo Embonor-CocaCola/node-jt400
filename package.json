@@ -7,7 +7,7 @@
   "types": "dist/lib/jt400.d.ts",
   "repository": {
     "type": "git",
-    "url": "git://github.com/tryggingamidstodin/node-jt400.git"
+    "url": "git://github.com/Embonor-CocaCola/node-jt400.git"
   },
   "files": [
     "dist/lib",
@@ -39,7 +39,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tryggingamidstodin/node-jt400/issues"
+    "url": "https://github.com/Embonor-CocaCola/node-jt400/issues"
   },
   "engines": {
     "node": ">=8"
@@ -66,7 +66,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint && npm run format-verify",
-      "pre-push": "npm run build && npm run test"
+      "pre-push": "npm run build"
     }
   }
 }
